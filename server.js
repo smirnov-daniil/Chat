@@ -4,7 +4,7 @@ const http = require('http');
 const server = http.createServer(app);
 const { Server } = require("socket.io");
 const io = new Server(server);
-const port = 8000;
+const port = process.env.PORT || 8000;
 
 let recoveryDATA = [];
 let usernameLIST = ["DS2", "ds2"];
